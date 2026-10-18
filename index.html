@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Tạo layout với RWD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <!-- 1. Header / Banner -->
+        <header id="header">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">🌐</span>
+                    <span class="logo-text">RWD <span>Layout</span></span>
+                </div>
+                <div class="header-desc">
+                    <p>Thiết kế giao diện thích ứng đa màn hình (Responsive Web Design)</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- 2. Navigation Bar -->
+        <nav id="navbar">
+            <ul class="nav-menu">
+                <li><a href="#" class="active">Trang chủ</a></li>
+                <li><a href="#about">Giới thiệu</a></li>
+                <li><a href="#courses">Khóa học</a></li>
+                <li><a href="#news">Tin tức</a></li>
+                <li><a href="#services">Dịch vụ</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
+            </ul>
+        </nav>
+
+        <!-- 3. Main Container (Left - Content - Right) -->
+        <div id="container">
+            <!-- Cột trái (Sidebar Left) -->
+            <aside id="left">
+                <div class="widget">
+                    <h3 class="widget-title">Danh Mục Chính</h3>
+                    <ul class="side-list">
+                        <li><a href="#">Lập trình Web Frontend</a></li>
+                        <li><a href="#">Lập trình Web Backend</a></li>
+                        <li><a href="#">Responsive Web Design</a></li>
+                        <li><a href="#">HTML5 & CSS3 Cơ bản</a></li>
+                        <li><a href="#">Flexbox & CSS Grid</a></li>
+                        <li><a href="#">JavaScript Nâng cao</a></li>
+                    </ul>
+                </div>
+
+                <div class="widget">
+                    <h3 class="widget-title">Tài Liệu Hữu Ích</h3>
+                    <ul class="side-list">
+                        <li><a href="#">Tài liệu Media Queries</a></li>
+                        <li><a href="#">Quy tắc Mobile First</a></li>
+                        <li><a href="#">CSS Breakpoints chuẩn</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Cột giữa (Main Content) -->
+            <main id="content">
+                <!-- Hero Feature Section -->
+                <section class="hero-banner">
+                    <h2>Xây Dựng Website Chuẩn Responsive Web Design</h2>
+                    <p>Responsive Web Design (RWD) giúp giao diện tự động thích ứng mượt mà trên mọi thiết bị: Desktop, Laptop, Máy tính bảng (Tablet) và Điện thoại thông minh (Smartphone).</p>
+                    <a href="#learn-more" class="btn-primary">Tìm hiểu ngay</a>
+                </section>
+
+                <!-- Cards Grid Section -->
+                <section class="cards-section">
+                    <h3 class="section-title">Các Khái Niệm Cốt Lõi Của RWD</h3>
+                    <div class="cards-grid">
+                        <article class="card">
+                            <div class="card-icon">📐</div>
+                            <div class="card-body">
+                                <h4>Fluid Grid (Lưới co giãn)</h4>
+                                <p>Sử dụng đơn vị phần trăm (%), <code>fr</code>, <code>vw/vh</code> thay vì kích thước cố định để các phần tử co giãn linh hoạt theo tỷ lệ màn hình.</p>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <div class="card-icon">📱</div>
+                            <div class="card-body">
+                                <h4>Media Queries (@media)</h4>
+                                <p>Thiết lập các mốc Breakpoints phù hợp để áp dụng quy tắc CSS chuyên biệt cho từng độ phân giải thiết bị.</p>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <div class="card-icon">🖼️</div>
+                            <div class="card-body">
+                                <h4>Flexible Images</h4>
+                                <p>Đặt <code>max-width: 100%; height: auto;</code> giúp hình ảnh co giãn tự nhiên, không bị tràn ra ngoài khung chứa trên màn hình nhỏ.</p>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <div class="card-icon">⚡</div>
+                            <div class="card-body">
+                                <h4>Flexbox & CSS Grid</h4>
+                                <p>Sử dụng các hệ thống dàn trang hiện đại giúp bố cục đa cột trên màn hình rộng tự động xếp chồng dạng cột đơn trên di động.</p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Cột phải (Sidebar Right) -->
+            <aside id="right">
+                <div class="widget">
+                    <h3 class="widget-title">Thông Báo Mới</h3>
+                    <div class="notice-item">
+                        <span class="notice-badge">Mới</span>
+                        <p class="notice-text">Khóa học Lập trình Web Fullstack khai giảng vào ngày 01 tháng tới.</p>
+                    </div>
+                    <div class="notice-item">
+                        <span class="notice-badge hot">Hot</span>
+                        <p class="notice-text">Hội thảo trực tuyến: Kỹ thuật tối ưu hiệu năng CSS và RWD hiện đại.</p>
+                    </div>
+                </div>
+
+                <div class="widget">
+                    <h3 class="widget-title">Đăng Ký Tư Vấn</h3>
+                    <form class="contact-form" onsubmit="event.preventDefault(); alert('Cảm ơn bạn đã đăng ký!');">
+                        <div class="form-group">
+                            <input type="text" placeholder="Họ và tên..." required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email nhận tài liệu..." required>
+                        </div>
+                        <button type="submit" class="btn-submit">Nhận tư vấn miễn phí</button>
+                    </form>
+                </div>
+            </aside>
+        </div>
+
+        <!-- 4. Footer -->
+        <footer id="footer">
+            <div class="footer-content">
+                <p>&copy; 2026 Bố cục RWD hoàn chỉnh. Thực hành thiết kế Web với HTML và CSS.</p>
+                <p>Designed with ❤️ for Responsive Web Design</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
